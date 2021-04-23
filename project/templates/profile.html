@@ -4,4 +4,27 @@
 <h1 class="title">
   Welcome, {{ name }}!
 </h1>
+<div class="box">
+
+  {% for i in range(0,8) %}
+    {% for j in range(8) %}
+      <button class="button" id="{{ i }}"></button>
+    {% endfor %}
+    <br>
+  {% endfor %}
+  </div>
+
+  <form method="post" action="#">
+  <div class="field is-grouped">
+    <p class="control is-expanded">
+      <input class="input" type="text" id="text" name="text" placeholder="Write on your Sensehat">
+      <button type="submit">Send</button>
+    </p>
+  </div>
+  </form>
+  <h1 class="title">
+    Welcome, {{ texto }}!
+  </h1>
+  </div>
+</div>
 {% endblock %}

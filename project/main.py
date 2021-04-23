@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Flask, Blueprint, render_template, request
 from flask_login import login_required, current_user
 
 from . import db
@@ -9,8 +9,12 @@ main = Blueprint('main', __name__)
 def index():
     return render_template('index.html')
 
-@main.route('/profile')
+@main.route('/profile', methods=["GET", "POST"])
 @login_required
-def profile():
-    return render_template('profile.html', name=current_user.name)
 
+def profile():
+        response()
+        return render_template('profile.html', name=current_user.name)
+
+def response():
+        print(request.form.get("text"))
