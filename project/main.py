@@ -1,5 +1,6 @@
 from flask import Flask, Blueprint, render_template, request
 from flask_login import login_required, current_user
+from sense_hat import SenseHat
 
 from . import db
 
@@ -13,8 +14,9 @@ def index():
 @login_required
 
 def profile():
-        response()
-        return render_template('profile.html', name=current_user.name)
-
-def response():
-        print(request.form.get("text"))
+    text = request.form.get("text")
+    print(text)
+    if text:
+        sense = SenseHat()
+        sense.show_message(text)
+    return render_template('profile.html', name=current_user.name, )
