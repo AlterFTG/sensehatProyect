@@ -18,5 +18,13 @@ def profile():
     print(text)
     if text:
         sense = SenseHat()
+        sense.clear()
         sense.show_message(text)
     return render_template('profile.html', name=current_user.name, )
+
+@main.route('/weather')
+@login_required
+def weather():
+    humidity = round(sense.get_humidity(), 1)
+    pressure = round(sense.get_pressure(), 1)
+    return render_template('weather.html', celcius=celcius, fahrenheit=fahrenheit, humidity=humidity, pressure=pressure)
