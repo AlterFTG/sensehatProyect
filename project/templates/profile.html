@@ -1,19 +1,26 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-  Welcome, {{ name }}!
-</h1>
-<div class="box">
-
+<h1 class="title">AAAAA</h1>
+<div id="palette">
+  {% set colors = ["#000000", "#FFFFFF", "#FF0000", "#bfff00", "#000080", "#FFFF00", "#00FFFF", "#FFCBDB" ] %}
   {% for i in range(0,8) %}
-    {% for j in range(8) %}
-      <button class="button" id="{{ i }}"></button>
-    {% endfor %}
-    <br>
+  <div class="pen" style="background-color:{{ colors[i] }};" onclick="setPenColour('{{ colors[i] }}')"></div>
   {% endfor %}
-  </div>
+</div>
 
+<div class="wrapper">
+  <div id="art">
+    {% for i in range(0,8) %}
+    <div>
+      {% for j in range(8) %}
+        <div class="pixel" id="{{ i }}" onclick="setPixelColour(this)"></div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<br>
   <form method="post" action="#">
   <div class="field is-grouped">
     <p class="control is-expanded">

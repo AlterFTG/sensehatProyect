@@ -47,3 +47,6 @@ auth/share/python-wheels/html5lib-1.0.1-py2.py3-none-any.whl
 auth/share/python-wheels/chardet-3.0.4-py2.py3-none-any.whl
 auth/share/python-wheels/appdirs-1.4.3-py2.py3-none-any.whl
 .gitignore
+project/__pycache__/models.cpython-38.pyc
+project/__pycache__/auth.cpython-38.pyc
+project/__pycache__/__init__.cpython-38.pyc

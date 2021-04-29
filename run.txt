@@ -1,0 +1,9 @@
+#!/bin/bash
+
+sudo source auth/bin/activate
+
+sudo export FLASK_DEBUG=1
+
+sudo export FLASK_APP=project
+
+sudo flask run --host=0.0.0.0
