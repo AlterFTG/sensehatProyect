@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div id="palette">
+  {% set colors = ["#000000", "#FFFFFF", "#FF0000", "#bfff00", "#000080", "#FFFF00", "#00FFFF", "#FFCBDB" ] %}
+  {% for i in range(0,8) %}
+  <div class="pen" style="background-color:{{ colors[i] }};" onclick="setTextColor('{{ colors[i] }}')"></div>
+  {% endfor %}
+</div>
+
+<form method="post" action="#">
+  <div class="field is-grouped">
+    <p class="control is-expanded">
+      <input class="input" type="text" id="text" name="text" placeholder="Write on your Sensehat">
+      <input type="hidden" id="textColor" name="textColor" value="">
+      <button type="submit">Send</button>
+    </p>
+  </div>
+  </form>
+
+{% endblock %}

@@ -7,3 +7,8 @@ function setPixelColour(pixel){
 function setPenColour(color) {
   penColour = color;
 }
+
+function setTextColor(color) {
+  document.getElementById("textColor").value = color;
+  console.log(color);
+}

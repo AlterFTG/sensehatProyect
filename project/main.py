@@ -27,3 +27,15 @@ def weather():
     humidity = round(sense.get_humidity(), 1)
     pressure = round(sense.get_pressure(), 1)
     return render_template('weather.html', celcius=celcius, fahrenheit=fahrenheit, humidity=humidity, pressure=pressure)
+
+@main.route('/message', methods=["GET", "POST"])
+@login_required
+
+def message():
+    text = request.form.get("text")
+    print(text)
+    if text:
+        sense = SenseHat()
+        sense.clear()
+        sense.show_message(text)
+    return render_template('message.html')
