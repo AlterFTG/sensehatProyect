@@ -5,11 +5,9 @@
 <div class="mainWrapper">
 <h1 class="title">AAAAA</h1>
 <div id="palette">
-  {% set colors = ["#000000", "#FFFFFF", "#FF0000", "#bfff00", "#000080", "#FFFF00", "#00FFFF", "#FFCBDB" ] %}
-
-  {% set colorTest = {"black": "#000000", "white": "#FFFFFF", "red": "#FF0000", "lime": "#bfff00", "navy": "#000080", "yellow": "#FFFF00", 
-  "cyan": "#00FFFF", "pink": "#FFCBDB" } %}
-
+  {% set colorTest = {"maroon": "#800000", "crimson": "#DC143C", "red": "#ff0000", "darkorange": "#FF8C00", orange": "#ffA5000", "yellow": "#ffff00", "olive": "#808000", "purple": "#800080", 
+  "fuchsia": "#ff00ff", "hotpink": "#FF69B4", "pink", "#FFC0CB", "white": "#ffffff", "greenyellow": "#ADFF2F", "green": "#008000", "navy": "#000080", "blue": "#0000ff, "aqua": "#00ffff", "teal": "#008080",
+  "silver": "#808080"} %}
 
   {% for x in colorTest %}
   <div class="pen" style="background-color:{{ x }};" onclick="setPenColour('{{ x }}')"></div>

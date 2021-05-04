@@ -19,16 +19,13 @@ def profile():
         data = data.split(',')
         data = [w.replace('"',"").replace("[","").replace("]","") for w in data]
 
-        blank = (0, 102, 102)
-        black = (204, 0, 204)
-        red = 2
-
-        colorDict = {"blank": (0, 102, 102), "black": (0,0,0), "red": (202,202,202)}
+        colorDict = {"maroon": (128,0,0), "crimson": (220,20,60), "red": (255,0,0), "darkorange": (255,140,0), "orange": (255,165,0), "yellow": (255,255,0), "olive": (128,128,0), "purple": (128,0,128), 
+        "fuchsia": (255,0,255), "hotpink": (255,105,180), "pink": (255,192,203), "white": (255,255,255), "greenyellow": (173,255,47), "green": (0, 128, 0), "navy": (0,0,128), "blue": (0,0,255), "aqua": (0,255,255), "teal": (0,128,128),
+        "silver": (192,192,192)}
 
         draw = []
         for x in range(len(data)):
             draw.append(colorDict[data[x]])
-
 
         print(draw)
 
