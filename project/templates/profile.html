@@ -3,13 +3,13 @@
 {% block content %}
 
 <div class="mainWrapper">
-<h1 class="title">AAAAA</h1>
+<h1 class="title">Pixel draw</h1>
 <div id="palette">
-  {% set colorTest = {"maroon": "#800000", "crimson": "#DC143C", "red": "#ff0000", "darkorange": "#FF8C00", orange": "#ffA5000", "yellow": "#ffff00", "olive": "#808000", "purple": "#800080", 
-  "fuchsia": "#ff00ff", "hotpink": "#FF69B4", "pink", "#FFC0CB", "white": "#ffffff", "greenyellow": "#ADFF2F", "green": "#008000", "navy": "#000080", "blue": "#0000ff, "aqua": "#00ffff", "teal": "#008080",
+  {% set colorTest = {"maroon": "#800000", "crimson": "#DC143C", "red": "#ff0000", "darkorange": "#FF8C00", "orange": "#ffA5000", "yellow": "#FFFF00", "khaki": "#F0E68C", "olive": "#808000", "purple": "#800080", 
+  "fuchsia": "#ff00ff", "hotpink": "#FF69B4", "pink": "#FFC0CB", "white": "#ffffff", "greenyellow": "#ADFF2F", "green": "#008000", "navy": "#000080", "blue": "#0000ff", "aqua": "#00ffff", "teal": "#008080",
   "silver": "#808080"} %}
 
-  {% for x in colorTest %}
+  {% for x, y in colorTest.items() %}
   <div class="pen" style="background-color:{{ x }};" onclick="setPenColour('{{ x }}')"></div>
   {% endfor %}
 </div>

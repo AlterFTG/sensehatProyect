@@ -1,7 +1,12 @@
 let penColour = 'black';
 
 function setPixelColour(pixel){
-  pixel.style.backgroundColor = penColour;
+
+  if(pixel.style.backgroundColor == penColour){
+    pixel.style.backgroundColor = "";
+  }else{
+    pixel.style.backgroundColor = penColour;
+  }
   document.getElementById(pixel.id).setAttribute("value",penColour);
 }
 
