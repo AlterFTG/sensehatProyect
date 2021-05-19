@@ -1,12 +1,14 @@
 body {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
+  padding: 0 0 2vh 0;
 }
 
 #art {
@@ -27,11 +29,12 @@ body {
   border: 1px solid black;
 }
 #palette {
-  width: 60%;
+  width: calc(100% + (10 - 300) * ((100vw - 280px) / (1024 - 280)));
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(2, 1fr);
   justify-items: stretch;
+  padding: 0 0 2vh 0;
 }
 
 .pen {
@@ -62,4 +65,14 @@ body {
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
   justify-items: stretch;
+}
+
+.actualColor{
+  padding: 0 0 1vh 0;
+  width: 30%;
+  height: 100%;
+}
+
+.weather{
+  transform: translate(0%, -5%);
 }

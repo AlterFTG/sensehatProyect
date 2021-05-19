@@ -1,9 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Raspberry Pi Weather Station</h1>
 
-<h2>Temperature</h2>
-<p><strong>Celcius:</strong> {{ celcius }}</p>
-<p><strong>Fahrenheit:</strong> {{ fahrenheit }}</p>
+<div class="weather">
+  <h1 class="title is-1 is-spaced">Weather Station</h1>
+  <h1 class="title is-3">Temperature</h2><br>
+
+  <p class="title is-4">Celcius: {{ celcius }}</p>
+  <p class="title is-4">Fahrenheit: {{ fahrenheit }}</p>
+  <progress class="progress {{ tempColor }}" value="{{ celcius }}" max="50">45%</progress>
+
+  <p class="title is-4">Humidity: {{ humidity }}</p>
+  <progress class="progress is-info" value="{{ humidity }}" max="100">45%</progress>
+
+  <p class="title is-4">Pressure: {{ pressure }}</p>
+  <progress class="progress is-info" value="{{ pressure }}" max="100">45%</progress>
+
+</div>
 {% endblock %}

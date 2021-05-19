@@ -4,8 +4,13 @@
 
 <div class="mainWrapper">
 <h1 class="title">Pixel draw</h1>
+
+<div class="actualColor"> 
+  <div id="actualColor" class="pen" style="background-color:red"></div>
+</div>
+
 <div id="palette">
-  {% set colorTest = {"maroon": "#800000", "crimson": "#DC143C", "red": "#ff0000", "darkorange": "#FF8C00", "orange": "#ffA5000", "yellow": "#FFFF00", "khaki": "#F0E68C", "olive": "#808000", "purple": "#800080", 
+  {% set colorTest = {"maroon": "#800000", "brown": "#A52A2A", "sienna": "#A0522D", "chocolate": "#D2691E" ,"crimson": "#DC143C", "red": "#ff0000", "salmon": "#FA8072","darkorange": "#FF8C00", "orange": "#ffA5000", "yellow": "#FFFF00", "khaki": "#F0E68C", "olive": "#808000", "purple": "#800080", 
   "fuchsia": "#ff00ff", "hotpink": "#FF69B4", "pink": "#FFC0CB", "white": "#ffffff", "greenyellow": "#ADFF2F", "green": "#008000", "navy": "#000080", "blue": "#0000ff", "aqua": "#00ffff", "teal": "#008080",
   "silver": "#808080"} %}
 
@@ -24,16 +29,5 @@
   </div>
 </div>
   <input type="hidden" id="" name="" value="">
-  <button id="demo_btn" onclick="sendDraw()">SEND</button>  
-<br>
-
-  <div class="">
-    <div class="drawsContainer">
-      {% set draws = ["Kirby", "PipBoy", "Alien", "Skull"] %}
-      {% for i in range(draws|length) %}
-        <div class="" id="{{ draws[i] }}" onclick="getDraw">{{ draws[i] }}"</div>
-      {% endfor %}
-    </div>
-  </div>
-</div>
+  <button class="button is-light" id="draw_btn" onclick="sendDraw()">SEND</button>  
 {% endblock %}

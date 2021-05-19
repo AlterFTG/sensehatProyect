@@ -12,6 +12,7 @@ function setPixelColour(pixel){
 
 function setPenColour(color) {
   penColour = color;
+  document.getElementById("actualColor").style.backgroundColor = penColour;
 }
 
 function sendDraw(){

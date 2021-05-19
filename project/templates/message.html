@@ -2,15 +2,15 @@
 
 {% block content %}
 
-<h1 class="title">Sense message</h1>
+  <h1 class="title">Sense message</h1>
 
-<form method="post" action="#">
-  <div class="field is-grouped">
-    <p class="control is-expanded">
-      <input class="input" type="text" id="text" name="text" placeholder="Write on your Sensehat">
-      <button type="submit">Send</button>
-    </p>
-  </div>
+  <form method="post" action="#">
+    <div class="field is-grouped">
+      <p class="control is-expanded">
+        <textarea id="text" name="text" class="textarea" placeholder="Write on your Sensehat"></textarea>
+        <button class="button is-light" type="submit">Send</button>
+      </p>
+    </div>
   </form>
 
 {% endblock %}
