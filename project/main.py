@@ -1,5 +1,6 @@
 from flask import Flask, Blueprint, render_template, jsonify, request
 from flask_login import login_required, current_user
+from sense_hat import SenseHat
 
 from . import db
 
@@ -35,11 +36,12 @@ def profile():
 @main.route('/weather')
 @login_required
 def weather():
-    #humidity = round(sense.get_humidity(), 1)
-    #pressure = round(sense.get_pressure(), 1)
-    #temperature = sense.get_temperature()
-    #celsius = round(temperature, 1)
-    #fahrenheit = 1.8 * round(temperature, 1) + 32
+    sense = SenseHat();
+    humidity = round(sense.get_humidity(), 1)
+    pressure = round(sense.get_pressure(), 1)
+    temperature = sense.get_temperature()
+    celcius = round(temperature, 1)
+    fahrenheit = 1.8 * round(temperature, 1) + 32
     temperature = 32
 
     if temperature < 20:
@@ -49,7 +51,7 @@ def weather():
     else:
         tempColor = "is-danger"
 
-    return render_template('weather.html', celcius=32, fahrenheit=180, humidity=70, pressure=100, tempColor = tempColor)
+    return render_template('weather.html', celcius=celcius, fahrenheit=fahrenheit, humidity=humidity, pressure=pressure, tempColor = tempColor)
 
 @main.route('/message', methods=["GET", "POST"])
 @login_required
