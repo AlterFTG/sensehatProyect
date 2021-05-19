@@ -6,7 +6,7 @@
 <h1 class="title">Pixel draw</h1>
 
 <div class="actualColor"> 
-  <div id="actualColor" class="pen" style="background-color:red"></div>
+  <div id="actualColor" class="pen"></div>
 </div>
 
 <div id="palette">
@@ -23,11 +23,21 @@
   <div id="art">
     {% for i in range(0,64) %}
     <div class="pixel" id="{{ loop.index }}" 
-    onclick="setPixelColour(this)"></div>
+    onclick="setPixelColour(this)" style="background-color: blank;"></div>
     {% endfor %}
     
   </div>
 </div>
+
+<div id="buttonList" class="buttons">
   <input type="hidden" id="" name="" value="">
-  <button class="button is-light" id="draw_btn" onclick="sendDraw()">SEND</button>  
+  <button id="addButton" class="button" onclick="addDraw()">+</button>
+  <button class="button" onclick="selectDraw(this)">1</button>
+</div>
+<div class="buttons">
+  <input type="hidden" id="" name="" value="">
+  <button class="button is-light" id="draw_btn" onclick="sendDraw()">SEND</button>
+  <button class="button">REMOVE</button>
+  <button class="button" onclick="saveDraw()">SAVE DRAW</button>
+</div>
 {% endblock %}

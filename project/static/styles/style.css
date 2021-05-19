@@ -76,3 +76,7 @@ body {
 .weather{
   transform: translate(0%, -5%);
 }
+
+.buttons {
+  display: flex-center;
+}
