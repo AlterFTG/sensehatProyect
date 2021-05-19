@@ -1,5 +1,6 @@
 from flask import Flask, Blueprint, render_template, jsonify, request
 from flask_login import login_required, current_user
+from sense_hat import SenseHat
 
 from . import db
 
