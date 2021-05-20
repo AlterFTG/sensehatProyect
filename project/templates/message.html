@@ -4,11 +4,15 @@
 
   <h1 class="title">Sense message</h1>
 
-  <form method="post" action="#">
+  <form id="textForm" name="textForm" method="post" action="#">
     <div class="field is-grouped">
       <p class="control is-expanded">
-        <textarea id="text" name="text" class="textarea" placeholder="Write on your Sensehat"></textarea>
+        <textarea id="text" name="text" class="textarea" placeholder="Write on your Sensehat" form="textForm"></textarea>
         <button class="button is-light" type="submit">Send</button>
+        <label class="checkbox">
+          <input type="checkbox" name="slide" value="1">
+          Slide
+        </label>
       </p>
     </div>
   </form>
