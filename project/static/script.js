@@ -1,14 +1,10 @@
-colorDict = {"rgb(128, 0, 0)": "maroon", "rgb(165, 42, 42)": "brown", "rgb(160, 82, 45)": "sienna", "rgb(210, 105, 30)": "chocolate", "rgb(220, 20, 60)": "crimson", "rgb(255, 0, 0)": "red", "rgb(250, 128, 114)": "salmon", "rgb(255, 140, 0)": "darkorange", "rgb(255, 165, 0)": "orange",
-"rgb(255, 255, 0)": "yellow", "rgb(240, 230, 140)": "khaki","rgb(128, 128, 0)": "olive", "rgb(128, 0, 128)": "purple", "rgb(255, 0, 255)": "fuchsia", "rgb(255, 105, 180)": "hotpink", "rgb(255, 192, 203)": "pink", 
-"rgb(255, 255, 255)": "white", "rgb(173, 255, 47)": "greenyellow", "rgb(0, 128, 0)": "green", "rgb(0, 0, 128)": "navy", 
-"rgb(0, 0, 255)": "blue", "rgb(0, 255, 255)": "aqua", "rgb(0, 128, 128)": "teal", "rgb(192, 192, 192)": "silver", "rgb(172, 158, 158)": "blank"};
-
-let penColour = 'black';
+let penColour = 'red';
 
 let selectedDraw = 1;
 let drawOne = [];
 let drawTwo = [];
 let actualDraw = [];
+let randomDraw = [];
 
 function setPixelColour(pixel){
 
@@ -26,10 +22,10 @@ function setPenColour(color) {
 }
 
 function getDraw(){
+
   const x = document.getElementsByClassName("pixel");
 
   let draw = [];
-
 
   for (let i = 0; i < x.length; i++) {
 
@@ -41,6 +37,7 @@ function getDraw(){
   return draw;
 }
 
+
 function sendDraw(){
   
   selectedDraw == 1 
@@ -49,20 +46,29 @@ function sendDraw(){
 
   const URL = '/profile'
   const xhr = new XMLHttpRequest();
-  sender = JSON.stringify(drawOne);
-  senderTwo = JSON.stringify(drawTwo);
+  sender = JSON.stringify(draw);
   xhr.open('POST', URL);
-  xhr.send(sender, senderTwo);
+  xhr.send(sender);
 
 }
 
-function addDraw() {
-  if($('#buttonList').find('button').length < 3) 
-    $('#buttonList').append('<button class="button" onclick="selectDraw(this)">2</button>');
+function minusDraw() {
+  if($('#buttonList').find('button').length > 3) 
+    $('#buttonList button').remove(":contains('2')");
   else 
-    alert('Ya no caben más dibujos!');
+    alert('¡No se puede tener menos de un dibujo!');
   return false;  
 }
+
+
+function addDraw() {
+  if($('#buttonList').find('button').length < 4) 
+    $('#buttonList').append('<button class="button" onclick="selectDraw(this)">2</button>');
+  else 
+    alert('¡Ya no caben más dibujos!');
+  return false;  
+}
+
 
 function selectDraw(button) {
 
@@ -80,6 +86,7 @@ function selectDraw(button) {
   }
 
 }
+
 
 function getActualDraw(){          
   let actualDraw = [];
@@ -104,10 +111,31 @@ function saveDraw(){
   selectedDraw == 1 ? drawOne = savedDraw : drawTwo = savedDraw;
 }
 
+
 function deleteDraw(){
+
   var x = document.getElementsByClassName("pixel");
   for (let i = 0; i < x.length; i++) {
     x[i].style.backgroundColor = "";
     x[i].setAttribute("value","blank");
+  }
+}
+
+function deleteSavedDraw(){
+
+  selectedDraw == 1 
+  ?  drawOne = []
+  :  drawTwo = []; 
+
+  deleteDraw()
+}
+
+function randomizer(){
+
+  randomDraw = kirby;
+
+  var x = document.getElementsByClassName("pixel");
+  for (let i = 0; i < x.length; i++) {
+    x[i].style.backgroundColor = randomDraw[i];
   }
 }

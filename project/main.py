@@ -1,6 +1,5 @@
 from flask import Flask, Blueprint, render_template, jsonify, request
 from flask_login import login_required, current_user
-from sense_hat import SenseHat
 import time
 
 from . import db
@@ -28,12 +27,7 @@ def profile():
 
         draw = []
         for x in range(len(data)):
-            draw.append(colorDict[data[x]])
-
-        sense = SenseHat()
-        sense.clear()
-
-        sense.set_pixels(draw)    
+            draw.append(colorDict[data[x]])  
 
         print(draw)
 
@@ -63,8 +57,6 @@ def weather():
 @main.route('/message', methods=["GET", "POST"])
 @login_required
 def message():
-    sense = SenseHat()
-    sense.clear()
     if request.method == "POST":  
         text = request.form.get("text")
         slide = request.form.get("slide")

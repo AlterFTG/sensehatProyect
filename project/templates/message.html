@@ -2,13 +2,14 @@
 
 {% block content %}
 
-  <h1 class="title">Sense message</h1>
+  <h1 class="title is-1 is-spaced">Sense message</h1>
+  <h2 class="subtitle is-4"> Write a message on your SenseHat down here</h2>
 
-  <form id="textForm" name="textForm" method="post" action="#">
+  <form class="box" id="textForm" name="textForm" method="post" action="#">
     <div class="field is-grouped">
       <p class="control is-expanded">
-        <textarea id="text" name="text" class="textarea" placeholder="Write on your Sensehat" form="textForm"></textarea>
-        <button class="button is-light" type="submit">Send</button>
+        <textarea id="text" name="text" class="textarea mb-4" placeholder="Write here! :)" form="textForm"></textarea>
+        <button class="button is-primary is-medium" type="submit">Send</button>
         <label class="checkbox">
           <input type="checkbox" name="slide" value="1">
           Slide
