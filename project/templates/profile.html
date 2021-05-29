@@ -30,16 +30,14 @@
 </div>
 
 <div id="buttonList" class="buttons">
-  <input type="hidden" id="" name="" value="">
-  <button id="addButton" class="button" onclick="minusDraw()">-</button>
-  <button id="addButton" class="button" onclick="addDraw()">+</button>
-  <button class="button" onclick="selectDraw(this)">1</button>
+  <button id="addButton" class="pixelButton" onclick="minusDraw()">-</button>
+  <button id="addButton" class="pixelButton" onclick="addDraw()">+</button>
+  <button class="pixelButton" onclick="selectDraw(this)">1</button>
 </div>
 <div class="buttons">
-  <input type="hidden" id="" name="" value="">
-  <button class="button is-light" id="draw_btn" onclick="sendDraw()">SEND</button>
-  <button class="button" onclick="deleteSavedDraw()">DELETE DRAW</button>
-  <button class="button" onclick="saveDraw()">SAVE DRAW</button>
-  <button class="button" onclick="randomizer()">RANDOM DRAW</button>
+  <button class="pixelButton" id="draw_btn" onclick="sendDraw()">send</button>
+  <button class="pixelButton" onclick="deleteSavedDraw()">delete</button>
+  <button class="pixelButton" onclick="saveDraw()">save</button>
+  <button class="pixelButton" onclick="randomizer()">random</button>
 </div>
 {% endblock %}

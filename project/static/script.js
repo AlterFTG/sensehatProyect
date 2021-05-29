@@ -1,4 +1,5 @@
-let penColour = 'red';
+let penColour;
+let color;
 
 let selectedDraw = 1;
 let drawOne = [];
@@ -53,9 +54,10 @@ function sendDraw(){
 }
 
 function minusDraw() {
-  if($('#buttonList').find('button').length > 3) 
+  if($('#buttonList').find('button').length > 3){ 
     $('#buttonList button').remove(":contains('2')");
-  else 
+    drawTwo = [];
+  }else
     alert('¡No se puede tener menos de un dibujo!');
   return false;  
 }
@@ -63,7 +65,7 @@ function minusDraw() {
 
 function addDraw() {
   if($('#buttonList').find('button').length < 4) 
-    $('#buttonList').append('<button class="button" onclick="selectDraw(this)">2</button>');
+    $('#buttonList').append('<button class="pixelButton" onclick="selectDraw(this)">2</button>');
   else 
     alert('¡Ya no caben más dibujos!');
   return false;  
@@ -132,7 +134,11 @@ function deleteSavedDraw(){
 
 function randomizer(){
 
-  randomDraw = kirby;
+  randomNumber = Math.floor(Math.random() * (4 - 1)) + 1;
+  console.log(randomNumber);
+  randomDraw = randomDict[randomNumber];
+
+  deleteDraw();
 
   var x = document.getElementsByClassName("pixel");
   for (let i = 0; i < x.length; i++) {
