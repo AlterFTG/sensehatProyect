@@ -134,7 +134,7 @@ function deleteSavedDraw(){
 
 function randomizer(){
 
-  randomNumber = Math.floor(Math.random() * (4 - 1)) + 1;
+  randomNumber = Math.floor(Math.random() * (19 - 1)) + 1;
   console.log(randomNumber);
   randomDraw = randomDict[randomNumber];
 

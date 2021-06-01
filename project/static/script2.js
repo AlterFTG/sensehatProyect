@@ -121,7 +121,59 @@ randomDict = {
       "greenyellow", "greenyellow", "greenyellow", "greenyellow", "greenyellow", 
       "greenyellow", "blank", "greenyellow", "blank", "blank", "greenyellow", "blank", 
       "greenyellow", "greenyellow", "blank", "greenyellow", "greenyellow", "greenyellow",
-      "greenyellow", "blank", "greenyellow"]
+      "greenyellow", "blank", "greenyellow"],
+
+  13 : ["red", "red", "red", "red", "red", "red", "red", "red", 
+        "red", "red", "red", "red", "red", "red", "red", "red", "yellow", 
+        "yellow", "yellow", "yellow", "yellow", "yellow", "yellow", "yellow", 
+        "yellow", "yellow", "yellow", "yellow", "yellow", "yellow", "yellow", 
+        "yellow", "yellow", "yellow", "yellow", "yellow", "yellow", "yellow", 
+        "yellow", "yellow", "yellow", "yellow", "yellow", "yellow", "yellow", 
+        "yellow", "yellow", "yellow", "red", "red", "red", "red", "red", "red", 
+        "red", "red", "red", "red", "red", "red", "red", "red", "red", "red"],    
+
+  14 :  ["aqua", "aqua", "aqua", "aqua", "aqua", "aqua", "aqua", "aqua", "aqua", 
+        "aqua", "aqua", "aqua", "aqua", "aqua", "aqua", "aqua", "white", "white", 
+        "white", "white", "white", "white", "white", "white", "white", "white", 
+        "white", "yellow", "yellow", "white", "white", "white", "white", "white", "white", 
+        "yellow", "yellow", "white", "white", "white", "white", "white", "white", "white", 
+        "white", "white", "white", "white", "aqua", "aqua", "aqua", "aqua", "aqua", "aqua",
+        "aqua", "aqua", "aqua", "aqua", "aqua", "aqua", "aqua", "aqua", "aqua", "aqua"], 
+
+  15 : ["aqua", "aqua", "red", "red", "red", "red", "red", "red", "aqua", "aqua", 
+        "yellow", "yellow", "yellow", "yellow", "yellow", "yellow", "aqua", "aqua", "red", 
+        "red", "red", "red", "red", "red", "aqua", "aqua", "yellow", "yellow", "yellow", 
+        "yellow", "yellow", "yellow", "aqua", "aqua", "red", "red", "red", "red", "red", 
+        "red", "aqua", "aqua", "yellow", "yellow", "yellow", "yellow", "yellow", "yellow", 
+        "aqua", "aqua", "red", "red", "red", "red", "red", "red", "aqua", "aqua", "yellow", 
+        "yellow", "yellow", "yellow", "yellow", "yellow"],
+        
+  16 : ["blank", "red", "red", "red", "red", "red", "red", "blank", "red", 
+        "red", "red", "red", "red", "red", "red", "red", "red", "yellow", 
+        "yellow", "red", "red", "yellow", "yellow", "red", "red", "yellow", "yellow", 
+        "yellow", "yellow", "yellow", "yellow", "red", "red", "white", "white", "yellow", 
+        "yellow", "white", "white", "red", "red", "yellow", "yellow", "yellow", "yellow", 
+        "yellow", "yellow", "red", "yellow", "yellow", "yellow", "maroon", "maroon", "yellow",
+         "yellow", "yellow", "blank", "yellow", "yellow", "yellow", "yellow", 
+         "yellow", "yellow", "blank"],
+
+   17 : ["blank", "blank", "aqua", "aqua", "blank", "blank", "blank", "blank", "blank", 
+        "aqua", "aqua", "aqua", "aqua", "blank", "blank", "blank", "darkorange", "aqua", 
+        "blue", "aqua", "aqua", "blank", "blank", "navy", "blank", "aqua", "aqua", "aqua", 
+        "navy", "navy", "navy", "navy", "blank", "aqua", "aqua", "aqua", "navy", "navy", 
+        "navy", "navy", "blank", "blank", "aqua", "aqua", "aqua", "aqua", "aqua", "blank", 
+        "blank", "blank", "aqua", "aqua", "aqua", "blank", "blank", "blank", "blank", 
+        "blank", "darkorange", "blank", "darkorange", "blank", "blank", "blank"],      
+
+    18 : ["blank", "blank", "green", "green", "green", "green", "blank", "blank", 
+    "green", "green", "green", "green", "green", "green", "green", "green", "blank", 
+    "green", "white", "green", "green", "white", "green", "blank", "blank", "green", 
+    "green", "green", "green", "green", "green", "blank", "green", "khaki", "khaki", 
+    "sienna", "sienna", "khaki", "khaki", "green", "green", "khaki", "khaki", "sienna", 
+    "sienna", "khaki", "khaki", "green", "blank", "khaki", "khaki", "khaki", "khaki", 
+    "khaki", "khaki", "sienna", "blank", "green", "green", "blank", "blank", "green", 
+    "green", "sienna"]
+        
 }
 
 
