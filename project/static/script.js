@@ -41,11 +41,11 @@ function getDraw(){
 
 function sendDraw(){
   
-  selectedDraw == 1 
-  ?  draw = drawOne
-  :  draw = drawTwo; 
+  draw = getActualDraw();
 
-  const URL = '/profile'
+  console.log(draw)
+
+  const URL = '/draw'
   const xhr = new XMLHttpRequest();
   sender = JSON.stringify(draw);
   xhr.open('POST', URL);

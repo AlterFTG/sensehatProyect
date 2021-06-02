@@ -10,10 +10,10 @@ main = Blueprint('main', __name__)
 def index():
     return render_template('index.html')
 
-@main.route('/profile', methods=["GET", "POST"])
+@main.route('/draw', methods=["GET", "POST"])
 @login_required
 
-def profile():
+def draw():
     if request.method == "POST":
         data = request.data
         data = data.decode()
@@ -31,7 +31,7 @@ def profile():
 
         print(draw)
 
-    return render_template('profile.html')
+    return render_template('draw.html')
 
 @main.route('/weather')
 @login_required
