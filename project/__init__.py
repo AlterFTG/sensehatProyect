@@ -2,7 +2,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 
-# init SQLAlchemy so we can use it later in our models
+# Se inicia SQLAlchemy para posteriormente poder usar nuestros modelos.
 db = SQLAlchemy()
 
 def create_app():
@@ -17,7 +17,7 @@ def create_app():
 
     @login_manager.user_loader
     def load_user(user_id):
-        # since the user_id is just the primary key of our user table, use it in the query for the user
+        # Como user_id es la primary key de nuestra tabla user, lo usaremos en la query para el usuario.
         return User.query.get(int(user_id))    
 
     app.config['SECRET_KEY'] = 'secret-key-goes-here'
@@ -25,11 +25,11 @@ def create_app():
 
     db.init_app(app)
 
-    # blueprint for auth routes in our app
+    # blueprint para las rutas de autenticación de nuestra app.
     from .auth import auth as auth_blueprint
     app.register_blueprint(auth_blueprint)
 
-    # blueprint for non-auth parts of app
+    # blueprint para las partes de la app que no requieran autenticación.
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
 
